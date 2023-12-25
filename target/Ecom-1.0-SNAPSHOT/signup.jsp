@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: rohan
+  User: pasindu
   Date: 2023-12-31
   Time: 23:43
   To change this template use File | Settings | File Templates.
@@ -37,6 +37,23 @@
       margin-top: auto;
     }
   </style>
+  <script>
+    function checkPasswordMatch() {
+      var username = document.getElementById("username").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+
+      if (password === confirmPassword) {
+        // Passwords match, proceed to submit the form
+        return true;
+      } else {
+        // Passwords do not match
+        alert("Passwords do not match. Please try again.");
+        return false;
+      }
+    }
+  </script>
 </head>
 <body>
 
@@ -44,7 +61,7 @@
   <h2 class="mt-4">User Registration</h2>
 
   <div class="form-container">
-    <form action="RegisterServlet" method="post">
+    <form action="/Ecom_war/signup" method="post">
       <div class="form-group">
         <label for="username">Username:</label>
         <input type="text" class="form-control" id="username" name="username" required>
@@ -65,6 +82,7 @@
     </form>
   </div>
 </main>
+
 
 <%@ include file="footer.jsp" %>
 

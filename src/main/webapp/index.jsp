@@ -82,12 +82,15 @@
         <div class="card product-card">
             <img src="<%=iurl%>" class="card-img-top" alt="Product <%=iurl%>">
             <div class="card-body">
-                <form action="/Ecom_war/cartoadd" method="get">
+                <form action="/Ecom_war/addcart" method="post">
                 <h5 class="card-title"><%=product.getName()%></h5>
                     <h5 class="card-title">USD <%=product.getPrice()%></h5>
-                <p class="card-text"><%=product.getDescription()%></p>
+                    <p class="card-text"><%=product.getDescription()%></p>
                     <input type="number" class="form-control" placeholder="Quantity" name="qti"/>
                     <input type="hidden" name="product" value="<%=product.getProduct_id()%>">
+                    <%
+                        System.out.println("here we are printing add to cart productID "+product.getProduct_id());
+                    %>
                 <button class="btn btn-primary btn-add-to-cart" type="submit">Add to Cart</button>
                 </form>
             </div>

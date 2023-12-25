@@ -62,4 +62,23 @@ public class ProductDAO {
 
         return products;
     }
+
+    public Product getProductbyID(String productid){
+        Product product = new Product();
+        try (Connection connection = DatabaseConnect.getInstance().getConnection()) {
+            String query = "SELECT * FROM products where product_id = ?";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+                preparedStatement.setString(1, String.valueOf(productid));
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    resultSet.next();
+                    product.setName(resultSet.getString("name"));
+                    product.setPrice(resultSet.getDouble("price"));
+                }
+            }
+            return product;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error while fetching categories from the database", e);
+        }
+
+    }
 }
