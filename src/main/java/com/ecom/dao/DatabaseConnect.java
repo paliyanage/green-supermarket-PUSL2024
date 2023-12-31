@@ -15,7 +15,7 @@ import java.sql.SQLException;
 public class DatabaseConnect {
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/ecom";
     private static final String USER_NAME = "root";
-    private static final String PASSWORD = "";
+    private static final String PASSWORD = "84152583Pp";
     private static DatabaseConnect instance;
 
     private DatabaseConnect(){}
