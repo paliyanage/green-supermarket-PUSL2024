@@ -61,7 +61,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 <!-- Include PayPal JavaScript SDK for Sandbox -->
-<script src="https://www.paypal.com/sdk/js?client-id=<pestid here>&currency=USD&enable-funding=venmo"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AfPcY8KwFXX-NbXOoW3WKBVqBav0_Md0sqcRtKZAEtnmUEU6A-xc63mLXZzN7pPKfgxzhc98nhW6SyND&currency=USD&enable-funding=venmo"></script>
 
 <!-- PayPal Smart Payment Buttons Configuration -->
 <script>
